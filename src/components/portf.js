@@ -173,10 +173,8 @@ export default function Portfolio() {
               )}
               <h3 className="text-xl font-semibold mb-2">ecommerce Website</h3>
               <p className="text-gray-600 mb-4">
-               ecommerce plateforme not finished yet, 80% of the work done, authentification, product list, landing page, cart, searchbar works with and without login,
-               admin panel where he can add categories, products, access only for him, tasks to complete : 
-               - Cart connected with backend to save user's cart, send orders by clients and treat them by admin, dashboard of admin to see the number of 
-               products, categories, orders, users...
+               ecommerce plateforme, authentification, product list, landing page, cart, orderPage, searchbar works with and without login,
+               admin panel where he can add categories, products,users, dashboard, access only for him,manage orders...
               </p>
               <div className="flex gap-4">
                 <button 
@@ -191,7 +189,20 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
                 >
+                  
                   <FaGithub /> GitHub
+                </a>
+                  <a 
+                  href="https://github.com/yazidDz06/frontendecommercevercel" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+                >
+                  
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://ecomyazid.vercel.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                  Live Demo
                 </a>
               </div>
             </div>
