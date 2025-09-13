@@ -85,130 +85,151 @@ export default function Portfolio() {
         </div>
 
         {/* Projects Section */}
-        <div id="projects" className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* Project 1 */}
-            <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition w-full">
-              {showVideo1 ? (
-               <video src={vid1} controls autoPlay className="rounded-lg mb-4 w-full h-64 object-cover" />
-              ) : (
-                <img 
-                  src={proj1} 
-                  alt="Project 1" 
-                  className="rounded-lg mb-4 w-full h-64 object-cover" 
-                />
-              )}
-              <h3 className="text-xl font-semibold mb-2">Restaurant Reservation</h3>
-              <p className="text-gray-600 mb-4">
-                Full stack web application that allows making reservations at a restaurant. 
-                It solves the problem of table unavailability by informing clients in advance 
-                about table availability for a given time and date.
-              </p>
-              <div className="flex gap-4">
-                <button 
-                  onClick={() => setShowVideo1(!showVideo1)} 
-                  className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
-                >
-                  <FaVideo /> Video
-                </button>
-                <a 
-                  href="https://github.com/yazidDz06/resto" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
-                >
-                  <FaGithub /> GitHub
-                </a>
-              </div>
-            </div>
+         <div id="projects" className="mb-16 px-4">
+      <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
 
-            {/* Project 2 */}
-            <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition w-full">
-              {showVideo2 ? (
-                <video src={vid2} controls autoPlay className="rounded-lg mb-4 w-full h-64 object-cover" />
-              ) : (
-                <img 
-                  src={proj2} 
-                  alt="Project 2" 
-                  className="rounded-lg mb-4 w-full h-64 object-cover" 
-                />
-              )}
-              <h3 className="text-xl font-semibold mb-2">Professionals Finder</h3>
-              <p className="text-gray-600 mb-4">
-                A web application that helps people find professionals in various fields 
-                and contact them for work. It also provides a tracking interface for 
-                professionals to view messages, offers, and more.
-              </p>
-              <div className="flex gap-4">
-                <button 
-                  onClick={() => setShowVideo2(!showVideo2)} 
-                  className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
-                >
-                  <FaVideo /> Video
-                </button>
-                <a 
-                  href="https://github.com/yazidDz06/skillocapp" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
-                >
-                  <FaGithub /> GitHub
-                </a>
-              </div>
-            </div>
-
-             {/* Project 3 */}
-            <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition w-full">
-              {showVideo3 ? (
-                <video src={vid3} controls autoPlay className="rounded-lg mb-4 w-full h-64 object-cover" />
-              ) : (
-                <img 
-                  src={proj3} 
-                  alt="Project 3" 
-                  className="rounded-lg mb-4 w-full h-64 object-cover" 
-                />
-              )}
-              <h3 className="text-xl font-semibold mb-2">ecommerce Website</h3>
-              <p className="text-gray-600 mb-4">
-               ecommerce plateforme, authentification, product list, landing page, cart, orderPage, searchbar works with and without login,
-               admin panel where he can add categories, products,users, dashboard, access only for him,manage orders...
-              </p>
-              <div className="flex gap-4">
-                <button 
-                  onClick={() => setShowVideo3(!showVideo3)} 
-                  className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
-                >
-                  <FaVideo /> Video
-                </button>
-                <a 
-                  href="https://github.com/yazidDz06/ecommerce-" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
-                >
-                  
-                  <FaGithub /> GitHub
-                </a>
-                  <a 
-                  href="https://github.com/yazidDz06/frontendecommercevercel" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
-                >
-                  
-                  <FaGithub /> GitHub
-                </a>
-                <a href="https://ecomyazid.vercel.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        {/* Project 1 */}
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl hover:-translate-y-1 transition flex flex-col">
+          {showVideo1 ? (
+            <video
+              src={vid1}
+              controls
+              autoPlay
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          ) : (
+            <img
+              src={proj1}
+              alt="Project 1"
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          )}
+          <h3 className="text-xl font-semibold mb-2">Restaurant Reservation</h3>
+          <p className="text-gray-600 mb-4 flex-1">
+            Full stack web application that allows making reservations at a
+            restaurant. It solves the problem of table unavailability by
+            informing clients in advance about table availability for a given
+            time and date.
+          </p>
+          <div className="flex flex-wrap gap-4 mt-auto">
+            <button
+              onClick={() => setShowVideo1(!showVideo1)}
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
+            >
+              <FaVideo /> Video
+            </button>
+            <a
+              href="https://github.com/yazidDz06/resto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              <FaGithub /> GitHub
+            </a>
           </div>
         </div>
+
+        {/* Project 2 */}
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl hover:-translate-y-1 transition flex flex-col">
+          {showVideo2 ? (
+            <video
+              src={vid2}
+              controls
+              autoPlay
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          ) : (
+            <img
+              src={proj2}
+              alt="Project 2"
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          )}
+          <h3 className="text-xl font-semibold mb-2">Professionals Finder</h3>
+          <p className="text-gray-600 mb-4 flex-1">
+            A web application that helps people find professionals in various
+            fields and contact them for work. It also provides a tracking
+            interface for professionals to view messages, offers, and more.
+          </p>
+          <div className="flex flex-wrap gap-4 mt-auto">
+            <button
+              onClick={() => setShowVideo2(!showVideo2)}
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
+            >
+              <FaVideo /> Video
+            </button>
+            <a
+              href="https://github.com/yazidDz06/skillocapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              <FaGithub /> GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Project 3 */}
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl hover:-translate-y-1 transition flex flex-col">
+          {showVideo3 ? (
+            <video
+              src={vid3}
+              controls
+              autoPlay
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          ) : (
+            <img
+              src={proj3}
+              alt="Project 3"
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          )}
+          <h3 className="text-xl font-semibold mb-2">E-commerce Website</h3>
+          <p className="text-gray-600 mb-4 flex-1">
+            E-commerce platform with authentication, product list, landing page,
+            cart, order page, search bar, works with and without login. Admin
+            panel to manage categories, products, users, dashboard, orders, and
+            restricted access.
+          </p>
+          <div className="flex flex-wrap gap-4 mt-auto">
+            <button
+              onClick={() => setShowVideo3(!showVideo3)}
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
+            >
+              <FaVideo /> Video
+            </button>
+            <a
+              href="https://github.com/yazidDz06/ecommerce-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              <FaGithub /> Backend
+            </a>
+            <a
+              href="https://github.com/yazidDz06/frontendecommercevercel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              <FaGithub /> Frontend
+            </a>
+            <a
+              href="https://ecomyazid.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition"
+            >
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
         
 
         {/* About Section */}
