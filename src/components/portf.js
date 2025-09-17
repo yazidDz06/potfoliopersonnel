@@ -1,13 +1,17 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaVideo } from "react-icons/fa";
-import htmllogo from '../assets/htmlcssjs.jpg';
-import reactlogo from '../assets/reactpic.jpg';
-import taillogo from '../assets/tail.png';
-import sqllogo from '../assets/sql.jpg';
+import htmllogo from '../assets/s1.png';
+import reactlogo from '../assets/react.png';
+import taillogo from '../assets/tailwind-css.png';
+import nodelogo from '../assets/nodejs.png';
+import postgreslogo from '../assets/postgresql.png';
+import mongodb from '../assets/mongodb.png';
+import javalogo from '../assets/java.png';
+import gitgit from '../assets/git.png';
 import proj1 from '../assets/project1.png';
-import proj2 from '../assets/project2.png';
+import proj2 from '../assets/coaching.png';
 import proj3 from '../assets/proj3.png';
 import vid1 from '../assets/project1.mp4';
-import vid2 from '../assets/project2.mp4';
+import vid2 from '../assets/videontwo.mp4';
 import vid3 from '../assets/ecommerce.mp4';
 import mapic from '../assets/DSC_0595.jpg';
 import { useState } from "react";
@@ -32,7 +36,7 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white text-center py-20">
+      <section className="bg-gradient-to-b from-blue-900 to-gray-50 text-white text-center py-20">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Khoualdi Lyazid
         </h1>
@@ -49,7 +53,7 @@ export default function Portfolio() {
         <div className="mt-6">
           <a
             href="#projects"
-            className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
+            className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-200 transition"
           >
             See My Work
           </a>
@@ -62,24 +66,44 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-center mb-10">My Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={htmllogo} alt="HTML CSS JS" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <img src={htmllogo} alt="HTML CSS JS" className="mx-auto mb-4 w-20 h-20 " />
               <h3 className="text-xl font-semibold mb-2">HTML / CSS / JS</h3>
               <p className="text-gray-600">Basics of every web page</p>
             </div>
             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={reactlogo} alt="React" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <img src={reactlogo} alt="React" className="mx-auto mb-4 w-20 h-20 " />
               <h3 className="text-xl font-semibold mb-2">React</h3>
               <p className="text-gray-600">For dynamic web apps</p>
             </div>
             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={taillogo} alt="Tailwind" className="mx-auto mb-4 w-20 h-20 rounded-full" />
+              <img src={taillogo} alt="Tailwind" className="mx-auto mb-4 w-20 h-20 " />
               <h3 className="text-xl font-semibold mb-2">Tailwind CSS</h3>
               <p className="text-gray-600">For modern styles</p>
             </div>
             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={sqllogo} alt="Express SQL" className="mx-auto mb-4 w-20 h-20 rounded-full" />
-              <h3 className="text-xl font-semibold mb-2">ExpressJS / SQL</h3>
+              <img src={nodelogo} alt="Express SQL" className="mx-auto mb-4 w-20 h-20 " />
+              <h3 className="text-xl font-semibold mb-2">ExpressJS / NodeJS</h3>
               <p className="text-gray-600">For building a solid back-end</p>
+            </div>
+            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
+              <img src={postgreslogo} alt="postgreSQL" className="mx-auto mb-4 w-20 h-20" />
+              <h3 className="text-xl font-semibold mb-2">postgreSQL</h3>
+              <p className="text-gray-600">For relational databases</p>
+            </div>
+             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
+              <img src={mongodb} alt="mongoDB" className="mx-auto mb-4 w-20 h-20 " />
+              <h3 className="text-xl font-semibold mb-2">Mongo DB</h3>
+              <p className="text-gray-600">flexible databases</p>
+            </div>
+             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
+              <img src={javalogo} alt="Java" className="mx-auto mb-4 w-20 h-20 " />
+              <h3 className="text-xl font-semibold mb-2">Java</h3>
+              <p className="text-gray-600">building desktop and mobile apps</p>
+            </div>
+             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
+              <img src={gitgit} alt="twoG" className="mx-auto mb-4 w-20 h-20" />
+              <h3 className="text-xl font-semibold mb-2">Git/Github</h3>
+              <p className="text-gray-600">Version control </p>
             </div>
           </div>
         </div>
@@ -147,11 +171,11 @@ export default function Portfolio() {
               className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
             />
           )}
-          <h3 className="text-xl font-semibold mb-2">Professionals Finder</h3>
+          <h3 className="text-xl font-semibold mb-2">Coaching plateform</h3>
           <p className="text-gray-600 mb-4 flex-1">
-            A web application that helps people find professionals in various
-            fields and contact them for work. It also provides a tracking
-            interface for professionals to view messages, offers, and more.
+            A web application that helps people find direct contact with a coach
+            by sending a form that goes to plateform mail with an auto reply to client email, after that the client will 
+            recieve work invitation from a coach in whatsapp.
           </p>
           <div className="flex flex-wrap gap-4 mt-auto">
             <button
@@ -161,12 +185,20 @@ export default function Portfolio() {
               <FaVideo /> Video
             </button>
             <a
-              href="https://github.com/yazidDz06/skillocapp"
+              href="https://github.com/yazidDz06/Gym"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
             >
               <FaGithub /> GitHub
+            </a>
+             <a
+              href="https://coachingplateforme.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition"
+            >
+             Live Demo
             </a>
           </div>
         </div>
@@ -245,7 +277,7 @@ export default function Portfolio() {
       </main>
 
       {/* Footer */}
-      <footer id="footer" className="bg-blue-900 text-white py-8">
+      <footer id="footer" className="bg-gradient-to-b from-gray-50 to-blue-900 text-white py-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
           <div className="mb-4 md:mb-0 text-left">
             <p className="flex items-center"><FaEnvelope className="mr-2" /> yazidkhoualdi5@gmail.com</p>
