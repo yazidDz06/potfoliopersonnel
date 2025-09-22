@@ -1,4 +1,5 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaVideo } from "react-icons/fa";
+import { motion } from "framer-motion";
 import htmllogo from '../assets/s1.png';
 import reactlogo from '../assets/react.png';
 import taillogo from '../assets/tailwind-css.png';
@@ -14,12 +15,15 @@ import vid1 from '../assets/project1.mp4';
 import vid2 from '../assets/videontwo.mp4';
 import vid3 from '../assets/ecommerce.mp4';
 import mapic from '../assets/DSC_0595.jpg';
+import admin from '../assets/admin.mp4';
+import lastp from "../assets/lastpr.png"
 import { useState } from "react";
 
 export default function Portfolio() {
   const [showVideo1, setShowVideo1] = useState(false);
   const [showVideo2, setShowVideo2] = useState(false);
   const [showVideo3,setShowVideo3] = useState(false);
+  const [showVideo4,setShowVideo4] = useState(false);
 
   return (
     <div className="font-sans bg-gray-50 text-gray-900">
@@ -41,22 +45,27 @@ export default function Portfolio() {
           Khoualdi Lyazid
         </h1>
         <div className="flex justify-center items-center">
-         <img 
-                  src={mapic} 
-                  alt="Me" 
-                  className="w-64 h-64 object-cover rounded-full mb-4" 
-                />
+           <motion.img
+            src={mapic}
+            alt="Me"
+            className="w-64 h-64 object-cover rounded-full mb-4"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+          />
           </div>
         <h2 className="text-2xl md:text-2xl font-normal">
           Web Developer
         </h2>
         <div className="mt-6">
-          <a
+           <motion.a
             href="#projects"
             className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-200 transition"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             See My Work
-          </a>
+          </motion.a>
         </div>
       </section>
 
@@ -65,46 +74,29 @@ export default function Portfolio() {
         <div id="skills" className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-10">My Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={htmllogo} alt="HTML CSS JS" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">HTML / CSS / JS</h3>
-              <p className="text-gray-600">Basics of every web page</p>
-            </div>
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={reactlogo} alt="React" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">React</h3>
-              <p className="text-gray-600">For dynamic web apps</p>
-            </div>
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={taillogo} alt="Tailwind" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">Tailwind CSS</h3>
-              <p className="text-gray-600">For modern styles</p>
-            </div>
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={nodelogo} alt="Express SQL" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">ExpressJS / NodeJS</h3>
-              <p className="text-gray-600">For building a solid back-end</p>
-            </div>
-            <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={postgreslogo} alt="postgreSQL" className="mx-auto mb-4 w-20 h-20" />
-              <h3 className="text-xl font-semibold mb-2">postgreSQL</h3>
-              <p className="text-gray-600">For relational databases</p>
-            </div>
-             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={mongodb} alt="mongoDB" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">Mongo DB</h3>
-              <p className="text-gray-600">flexible databases</p>
-            </div>
-             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={javalogo} alt="Java" className="mx-auto mb-4 w-20 h-20 " />
-              <h3 className="text-xl font-semibold mb-2">Java</h3>
-              <p className="text-gray-600">building desktop and mobile apps</p>
-            </div>
-             <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-              <img src={gitgit} alt="twoG" className="mx-auto mb-4 w-20 h-20" />
-              <h3 className="text-xl font-semibold mb-2">Git/Github</h3>
-              <p className="text-gray-600">Version control </p>
-            </div>
+            {[ // tes skills
+              { img: htmllogo, title: "HTML / CSS / JS", desc: "Basics of every web page" },
+              { img: reactlogo, title: "React", desc: "For dynamic web apps" },
+              { img: taillogo, title: "Tailwind CSS", desc: "For modern styles" },
+              { img: nodelogo, title: "ExpressJS / NodeJS", desc: "For building a solid back-end" },
+              { img: postgreslogo, title: "PostgreSQL", desc: "For relational databases" },
+              { img: mongodb, title: "Mongo DB", desc: "Flexible databases" },
+              { img: javalogo, title: "Java", desc: "Building desktop and mobile apps" },
+              { img: gitgit, title: "Git/Github", desc: "Version control" }
+            ].map((skill, i) => (
+              <motion.div
+                key={i}
+                className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <img src={skill.img} alt={skill.title} className="mx-auto mb-4 w-20 h-20" />
+                <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
+                <p className="text-gray-600">{skill.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
 
@@ -113,7 +105,48 @@ export default function Portfolio() {
       <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        
+        {/*projectlast*/}
+         <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl hover:-translate-y-1 transition flex flex-col">
+          {showVideo4 ? (
+            <video
+              src={admin}
+              controls
+              autoPlay
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          ) : (
+            <img
+              src={lastp}
+              alt="cDent"
+              className="rounded-lg mb-4 w-full aspect-[16/9] object-cover"
+            />
+          )}
+          <h3 className="text-xl font-semibold mb-2">clinical dental</h3>
+          <p className="text-gray-600 mb-4 flex-1">
+          MVP of appointments reservations in a clinical dental with client panel where he 
+          see all services and reserve by submiting a form, admin panel where he can view all patients, appointments, 
+          and availabilities, he can also create availabilities and change their status, availabilities 
+          are projected to clients so they can choose time and day to their appointments, for futur or on a request, 
+          i can add services with their times and prices so client make an appointments directly for his reason, also i will
+          add a quote on demand for clients.
+          </p>
+          <div className="flex flex-wrap gap-4 mt-auto">
+            <button
+              onClick={() => setShowVideo4(!showVideo4)}
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition"
+            >
+              <FaVideo /> Video
+            </button>
+            <a
+              href="https://github.com/yazidDz06/mvp-dental-clinic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              <FaGithub /> GitHub
+            </a>
+          </div>
+        </div>
         {/* Project 1 */}
         <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl hover:-translate-y-1 transition flex flex-col">
           {showVideo1 ? (
