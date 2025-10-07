@@ -17,6 +17,7 @@ import vid3 from '../assets/ecommerce.mp4';
 import mapic from '../assets/DSC_0595.jpg';
 import admin from '../assets/admin.mp4';
 import lastp from "../assets/lastpr.png"
+import ts from "../assets/typescript.png"
 import { useState } from "react";
 
 export default function Portfolio() {
@@ -83,6 +84,7 @@ export default function Portfolio() {
               { img: mongodb, title: "Mongo DB", desc: "Flexible databases" },
               { img: javalogo, title: "Java", desc: "Building desktop and mobile apps" },
               { img: gitgit, title: "Git/Github", desc: "Version control" }
+              ,{ img: ts, title: "TypeScript", desc: "JavaScript with types" }
             ].map((skill, i) => (
               <motion.div
                 key={i}
